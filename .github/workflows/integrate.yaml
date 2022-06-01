@@ -8,6 +8,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
+      - name: Check cargo version
+        run: cargo version
       - name: Check formatting
         run: cargo fmt -- --check
       - name: Build
